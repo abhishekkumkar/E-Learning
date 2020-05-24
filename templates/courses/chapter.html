@@ -23,21 +23,28 @@
         </form>
       </div>
 
-      <div class="col-md-3">
+      <div class="col-md-2">
         <form method='POST' action=''>
           {% csrf_token %}
           {{ add_link_form|crispy }}
           <input class='btn btn-primary' type='submit' name="add_link" value='Add YouTube video link'/>
         </form>
       </div>
+      
+      <div class="col-md-2">
+        <label for="live_video" class="control-label  requiredField">Live Stream Video<span class="asteriskField">*</span> </label> <br>
+          <button class="btn btn-primary" onclick=window.location.href='https://video.ibm.com/broadcaster' >Live Stream</button>
+      </div>
+      
 
-      <div class="col-md-3">
+      <div class="col-md-2">
         <form method='POST' action='' enctype="multipart/form-data">
           {% csrf_token %}
           {{ file_upload_form|crispy }}
           <input class='btn btn-primary' type='submit' name="add_file" value='Add File'/>
         </form>
       </div>
+      
     </div>
   
 
